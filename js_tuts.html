@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Tutorial</title>
+</head>
+<body>
+    <div class="header">
+        <h1>JS Tutorial - Modular Javascript</h1>
+    </div>
+    
+    <div id="statsModule">
+        <h3>Stats</h3>
+        <div id="stats">
+            <script id="stats-template" type="text/template">
+                <p>People:{{people}}</p>
+            </script>
+        </div>
+    </div>
+    <div id="peopleModule">
+        <h2>People</h2>
+
+        <input id="inPerson" type="text" placeholder="Person"/>
+
+        <input id="addPerson" type="button" value="Add Person">
+        <ul id="people">
+            <script id="people-template" type="text/template">
+                {{#people}}
+                    <li>
+                        <span>{{.}}</span>
+                        <a class="deletePerson" href="javascript:void(0);">Delete</a>
+                    </li>
+                {{/people}}
+            </script>
+        </ul>
+    </div>
+</body>
+<script src="jquery.min.js"></script>
+<script src="bootstrap.js"></script>
+<script src="mustache/mustache.js"></script>
+<script src="myJavascript2.js"></script>
+<script src="myJavascript.js"></script>
+</html>
